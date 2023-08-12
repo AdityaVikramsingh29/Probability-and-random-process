@@ -212,13 +212,17 @@ Problem 11.16.3.4
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-\textbf{Question 4} A card is selected from a pack of 52 cards\\
-\begin{enumerate}[label=(\alph*)]
+\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\item Consider the experiment of throwing a die, if a multiple of 3 comes up, throw the die again and if any other number comes, toss a coin. Find the conditional probability of the event 'the coin shows a tail',given that 'atlest one die shows a 3'.
+\item A die is thrown again and again until three sixes are obtained. Find the probability of obtaining the third six in the sixth throw of the die.
+\item Let X represent the difference between the number of heads and the number of
+tails obtained when a coin is tossed 6 times. What are possible values of X?
+\item A card is selected from a pack of 52 cards
+\begin{enumerate}
 \item How many points are there in the sample space?
 \item Calculate the probability that the cards is an ace of spades.
-\item Calculate the probability that the card is \begin{enumerate}[label=(\roman*)] \item an ace \item black card.
+\item Calculate the probability that the card is \begin{enumerate}\item an ace \item black card.
 \end{enumerate}
 \end{enumerate}
-
-
+\end{enumerate}
 \end{document}
