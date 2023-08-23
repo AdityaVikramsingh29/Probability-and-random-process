@@ -508,7 +508,7 @@ x_icirc= circ_gen(I,r)
 x_ccirc= circ_gen(O,radius)
 
 #Ploting the medians
-plt.subplot(222)
+plt.figure(1)
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
@@ -537,12 +537,10 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with Centroid')
 plt.savefig('../figs/figure_1.png')
-fig = plt.gcf()
-fig.canvas.manager.set_window_title('Figure 1')
-plt.show()
+
 
 #Ploting altitudes
-plt.subplot(221)
+plt.figure(2)
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
@@ -571,12 +569,10 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with altitude')
 plt.savefig('../figs/figure_2.png')
-fig = plt.gcf()
-fig.canvas.manager.set_window_title('Figure 2')
-plt.show()
+
 
 #Plotting incircle
-plt.subplot(121)
+plt.figure(3)
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
@@ -606,13 +602,11 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with incircle')
 plt.savefig('../figs/figure_3.png')
-fig = plt.gcf()
-fig.canvas.manager.set_window_title('Figure 3')
-plt.show()
+
 
 
 #Plotting circumcircle
-plt.subplot(122)
+plt.figure(4)
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
@@ -647,6 +641,5 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with circumcircle')
 plt.savefig('../figs/figure_4.png')
-fig = plt.gcf()
-fig.canvas.manager.set_window_title('Figure 4')
-plt.show()
+
+
