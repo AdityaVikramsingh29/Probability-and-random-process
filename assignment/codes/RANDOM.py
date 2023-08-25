@@ -544,15 +544,24 @@ plt.figure(2)
 x_AB = line_gen(A,B)
 x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
+x_AH = line_gen(A,H)
+x_BH = line_gen(B,H)
 x_AD_1 = line_gen(A,alt_foot(A,B,C))
 x_BE_1 = line_gen(B,alt_foot(B,A,C))
 x_CF_1 = line_gen(C,alt_foot(C,A,B))
+x_AE_1 = line_gen(A,alt_foot(B,A,C))
+x_BD_1 = line_gen(B,alt_foot(A,B,C))
+
 plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
 plt.plot(x_BC[0,:],x_BC[1,:],label='$BC$')
 plt.plot(x_CA[0,:],x_CA[1,:],label='$CA$')
 plt.plot(x_AD_1[0,:],x_AD_1[1,:],label='$AD_1$')
 plt.plot(x_BE_1[0,:],x_BE_1[1,:],label='$BE_1$')
 plt.plot(x_CF_1[0,:],x_CF_1[1,:],label='$CF_1$')
+plt.plot(x_AH[0,:],x_AH[1,:],label='$AH$')
+plt.plot(x_BH[0,:],x_BH[1,:],label='$BH$')
+plt.plot(x_AE_1[0,:],x_AE_1[1,:],linestyle = 'dashed' ,label='$AE_1$')
+plt.plot(x_BD_1[0,:],x_BD_1[1,:],linestyle = 'dashed' ,label='$BD_1')
 tri_coords = np.block([[A],[B],[C],[alt_foot(A,B,C)],[alt_foot(B,A,C)],[alt_foot(C,A,B)],[H]])
 plt.scatter(tri_coords[:,0], tri_coords[:,1])
 vert_labels = ['A','B','C','D_1','E_1','F_1','H']
@@ -569,7 +578,7 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with altitude')
 plt.savefig('../figs/figure_2.png')
-
+plt.show()
 
 #Plotting incircle
 plt.figure(3)
