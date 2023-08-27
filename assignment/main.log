@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  26 AUG 2023 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  27 AUG 2023 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1259,10 +1259,15 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<./figs/figure_1.png, id=7, 462.528pt x 346.896pt>
+<./figs/figure_5.png, id=7, 462.528pt x 346.896pt>
+File: ./figs/figure_5.png Graphic file (type png)
+<use ./figs/figure_5.png>
+Package pdftex.def Info: ./figs/figure_5.png  used on input line 226.
+(pdftex.def)             Requested size: 516.0pt x 387.0176pt.
+<./figs/figure_1.png, id=9, 462.528pt x 346.896pt>
 File: ./figs/figure_1.png Graphic file (type png)
 <use ./figs/figure_1.png>
-Package pdftex.def Info: ./figs/figure_1.png  used on input line 225.
+Package pdftex.def Info: ./figs/figure_1.png  used on input line 232.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
 
 (./tables/table1.tex
@@ -1273,27 +1278,32 @@ Package pdftex.def Info: ./figs/figure_1.png  used on input line 225.
 \gnumericColB=\skip76
 \gnumericColC=\skip77
 )
-<./figs/figure_2.png, id=9, 462.528pt x 346.896pt>
+<./figs/figure_2.png, id=10, 462.528pt x 346.896pt>
 File: ./figs/figure_2.png Graphic file (type png)
 <use ./figs/figure_2.png>
-Package pdftex.def Info: ./figs/figure_2.png  used on input line 240.
+Package pdftex.def Info: ./figs/figure_2.png  used on input line 247.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
  (./tables/table2.tex)
-<./figs/figure_3.png, id=10, 462.528pt x 346.896pt>
+<./figs/figure_3.png, id=11, 462.528pt x 346.896pt>
 File: ./figs/figure_3.png Graphic file (type png)
 <use ./figs/figure_3.png>
-Package pdftex.def Info: ./figs/figure_3.png  used on input line 255.
+Package pdftex.def Info: ./figs/figure_3.png  used on input line 262.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
  (./tables/table3.tex)
-<./figs/figure_4.png, id=11, 462.528pt x 346.896pt>
+<./figs/figure_4.png, id=12, 462.528pt x 346.896pt>
 File: ./figs/figure_4.png Graphic file (type png)
 <use ./figs/figure_4.png>
-Package pdftex.def Info: ./figs/figure_4.png  used on input line 271.
+Package pdftex.def Info: ./figs/figure_4.png  used on input line 278.
 (pdftex.def)             Requested size: 516.0pt x 387.0176pt.
 
-(./tables/table4.tex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./figs/figure_1.png>] [3 <./figs/figure_2.png>] [4 <./figs/figure_3.png>]
-[5 <./figs/figure_4.png>] (./main.aux)
+(./tables/table5.tex
+Overfull \hbox (10.0pt too wide) in paragraph at lines 214--214
+[]|[]| 
+ []
+
+) (./tables/table4.tex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[2 <./figs/figure_5.png>] [3 <./figs/figure_1.png>] [4 <./figs/figure_2.png>]
+[5 <./figs/figure_3.png>] [6 <./figs/figure_4.png>] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1301,10 +1311,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29535 strings out of 478287
- 581564 string characters out of 5849290
- 886661 words of memory out of 5000000
- 47071 multiletter control sequences out of 15000+600000
+ 29552 strings out of 478287
+ 581855 string characters out of 5849290
+ 893691 words of memory out of 5000000
+ 47081 multiletter control sequences out of 15000+600000
  548285 words of font info for 202 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,18n,96p,496b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1317,10 +1327,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 159511 bytes).
+Output written on main.pdf (6 pages, 177267 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

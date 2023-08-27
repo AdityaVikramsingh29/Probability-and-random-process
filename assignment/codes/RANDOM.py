@@ -507,6 +507,31 @@ x_icirc= circ_gen(I,r)
 [O,r] = ccircle(A,B,C)
 x_ccirc= circ_gen(O,radius)
 
+plt.figure(5)
+x_AB = line_gen(A,B)
+x_BC = line_gen(B,C)
+x_CA = line_gen(C,A)
+plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
+plt.plot(x_BC[0,:],x_BC[1,:],label='$BC$')
+plt.plot(x_CA[0,:],x_CA[1,:],label='$CA$')
+tri_coords = np.block([[A],[B],[C]])
+plt.scatter(tri_coords[:,0], tri_coords[:,1])
+vert_labels = ['A','B','C']
+for i, txt in enumerate(vert_labels):
+    plt.annotate(txt, # this is the text
+                 (tri_coords[i,0], tri_coords[i,1]), # this is the point to label
+                 textcoords="offset points", # how to position the text
+                 xytext=(0,10), # distance from text to points (x,y)
+                 ha='center') # horizontal alignment can be left, right or center
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.legend(loc='best')
+plt.grid() # minor
+plt.axis('equal')
+plt.title('Triangle')
+plt.savefig('../figs/figure_5.png')
+plt.show()
+
 #Ploting the medians
 plt.figure(1)
 x_AB = line_gen(A,B)
@@ -546,6 +571,7 @@ x_BC = line_gen(B,C)
 x_CA = line_gen(C,A)
 x_AH = line_gen(A,H)
 x_BH = line_gen(B,H)
+x_CH = line_gen(C,H)
 x_AD_1 = line_gen(A,alt_foot(A,B,C))
 x_BE_1 = line_gen(B,alt_foot(B,A,C))
 x_CF_1 = line_gen(C,alt_foot(C,A,B))
@@ -560,8 +586,11 @@ plt.plot(x_BE_1[0,:],x_BE_1[1,:],label='$BE_1$')
 plt.plot(x_CF_1[0,:],x_CF_1[1,:],label='$CF_1$')
 plt.plot(x_AH[0,:],x_AH[1,:],label='$AH$')
 plt.plot(x_BH[0,:],x_BH[1,:],label='$BH$')
+plt.plot(x_CH[0,:],x_CH[1,:],label='$CH$')
 plt.plot(x_AE_1[0,:],x_AE_1[1,:],linestyle = 'dashed' ,label='$AE_1$')
 plt.plot(x_BD_1[0,:],x_BD_1[1,:],linestyle = 'dashed' ,label='$BD_1')
+plt.plot(x_CF_1[0,:],x_CF_1[1,:],linestyle = 'dashed' ,label='$CF_1')
+
 tri_coords = np.block([[A],[B],[C],[alt_foot(A,B,C)],[alt_foot(B,A,C)],[alt_foot(C,A,B)],[H]])
 plt.scatter(tri_coords[:,0], tri_coords[:,1])
 vert_labels = ['A','B','C','D_1','E_1','F_1','H']
@@ -611,7 +640,7 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with incircle')
 plt.savefig('../figs/figure_3.png')
-
+plt.show()
 
 
 #Plotting circumcircle
@@ -650,5 +679,5 @@ plt.grid() # minor
 plt.axis('equal')
 plt.title('Triangle with circumcircle')
 plt.savefig('../figs/figure_4.png')
-
+plt.show()
 
