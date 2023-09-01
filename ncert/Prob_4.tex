@@ -1,6 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -174,11 +174,11 @@ Solution 11.16.3.4
 % make the title area
 \maketitle
 
-\newpage
+%\newpage
 
 %\tableofcontents
 
-\bigskip
+%\bigskip
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
@@ -253,23 +253,22 @@ $Z$(denotes value of card chosen)		&1 \leq Z \leq 13			\\
  \begin{enumerate}[label=(\alph*)] 
  \item The number of sample space points is 52 
  \item  
-PMF for Z is:
-\begin{align} 
-\pr{Z = z} &= \frac{1}{13} 
-\end{align}
-
-where $z$ = 1, 2, 3, ..., 13\\
-Similarly the PMF for Y and X are:
+ PMF for Z is:
  \begin{align}
- \pr{Y = y} &= \frac{1}{4}
- \end{align}
-where $y$ = 1, 2, 3
-\begin{align}
- \pr{X = x} &= \frac{1}{2} 
-  \end{align}
-where $x$ = 1, 2
- \begin{align}
- \pr{Y=1,Z=1} &= \pr{Y=1}\pr{Z=1} \\
+\text{$P_{Z}$(k)} &= \frac{1}{13} 
+\text{\hspace{8mm}k = 1, 2, 3, ..., 13}\\
+%\end{align}
+\text{Similarly the PMF for Y and X are:} \\
+ %\begin{align}
+ \text{$P_{Y}$(m)} &= \frac{1}{4}
+ \text{\hspace{8mm}m = 1, 2, 3}\\
+ %\end{align}
+ %\begin{align}
+ \text{$P_{X}$(n)}&= \frac{1}{2} 
+\text{ \hspace{8mm}n = 1, 2}\\
+  %\end{align}
+%\begin{align}
+ \text{$P_{ZY}$(1,1)} &= \text{$P_{Z}$(1)}\text{$P_{Y}$(1)}\text{\hspace{8mm} as ZY = 0} \\
  &= \brak{\frac{1}{4}}\brak{\frac{1}{13}}\\ 
  &= \frac{1}{52}  
  \end{align} 
@@ -277,11 +276,11 @@ where $x$ = 1, 2
  \begin{enumerate}[label=(\roman*)] 
  \item an ace 
  \begin{align}
- \pr{Z = 1} &= \frac{1}{13}.
+\text{$P_{Z}$(1)} &= \frac{1}{13}.
  \end{align}			 
  \item black card 
  \begin{align}
- \pr{X = 1} &= \frac{1}{2}.
+ \text{$P_{X}$(1)} &= \frac{1}{2}.
  \end{align}			 
 				 
  \end{enumerate}
