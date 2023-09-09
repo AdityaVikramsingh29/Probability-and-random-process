@@ -234,10 +234,10 @@ The total no. of trials is $n$ = 7\\
 p_{X}(k)&=  \myvec{n\\k}p^k\brak{1-p}^{n-k}
 &\text{k} = 0,1, 2,.. 7\\
 \text{Probability of Hitting the target atleast twice is} &= p_{X}(k\geq 2)\\
-&= 1 - p_{X}(k\leq 2)\\
+&= 1 - p_{X}(k<2)\\
 &= 1 - \bigg\{ p_{X}(k = 0) + p_{X}(k = 1)\bigg\}\\
 &= 1 - \bigg\{\myvec{7\\0}p^0\brak{1-p}^{7} + \myvec{7\\1}p^1\brak{1-p}^{6}\bigg\}\\
-&= 1 - \bigg\{\frac{1}{4}^0\brak{\frac{3}{4}}^{7}+ 7\frac{1}{4}^1\brak{\frac{3}{4}}^{6}\bigg\}\\
+&= 1 - \bigg\{\brak{\frac{1}{4}}^0\brak{\frac{3}{4}}^{7}+ 7\brak{\frac{1}{4}}^1\brak{\frac{3}{4}}^{6}\bigg\}\\
 &= 1 - \brak{\frac{3}{4}}^6\frac{10}{4}\\
 &= 1 -\brak{\frac{729}{1096}}\frac{10}{4}\\
 &= 1 -\frac{7290}{16384}\\
