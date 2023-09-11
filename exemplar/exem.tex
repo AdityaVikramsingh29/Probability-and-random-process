@@ -212,7 +212,7 @@ Solution 12.13.3.22
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 \textbf{Question 22}
-The Probability of a man hitting  target is 0.25.He shoots 7 times. What is the probability of his hiiting atleast twice?\\
+The Probability of a man hitting  target is 0.25.He shoots 7 times. What is the probability of his hitting atleast twice?\\
 \solution
 \begin{table}[htpb]-
 \centering 
@@ -231,18 +231,19 @@ $X$	        	&0 $\leq$ X $\leq$ 7		     & no. of times he hits the target\\
 \begin{align}
 \text{Let the probability of hitting the targets correctly be }p &= \frac{1}{4} = 0.25\\
 \text{CDF of binomial distribution is:}\\
-p\brak{X\leq k}&=  \sum_{k=0}^{k}\myvec{n\\k}p^k\brak{1-p}^{n-k}
-&\text{k} = 0,1, 2,.. 7\\
+F_{X}(k) &=  \sum_{k=0}^{k}\myvec{n\\k}p^k\brak{1-p}^{n-k}
+ &\text{k} = 0,1, 2,.. 7\\
 \text{Probability of Hitting the target atleast twice is} &= p\brak{X\geq 2}\\
 p\brak{X\geq 2} &= 1 - p\brak{X\leq 1}\\
- &= 1 - \bigg\{ \sum_{k=0}^{1}\myvec{7\\k}\brak{\frac{1}{4}}^k\brak{\frac{3}{4}}^{7-k}\bigg\}   &\text{Using CDF}\\ 
+&= F_{X}(7) - F_{X}(1)\\
+ &= 1 - \bigg\{ \sum_{k=0}^{1}\myvec{7\\k}\brak{\frac{1}{4}}^k\brak{\frac{3}{4}}^{7-k}\bigg\} \\ 
 %&= 1 - \bigg\{\myvec{7\\0}\brak{\frac{1}{4}}^0\brak{\frac{3}{4}}^{7} + \myvec{7\\1}\brak{\frac{1}{4}}^1\brak{\brak{\frac{1}{4}}}^{6}\bigg\}\\
 &= 1 - \bigg\{\brak{\frac{1}{4}}^0\brak{\frac{3}{4}}^{7}+ 7\brak{\frac{1}{4}}^1\brak{\frac{3}{4}}^{6}\bigg\}\\
 &= 1 - \brak{\frac{3}{4}}^6 \frac{10}{4}\\
 &= 1 -\brak{\frac{729}{1096}}\frac{10}{4}\\
 &= 1 -\frac{7290}{16384}\\
 &= \frac{9094}{16384}\\
-&= 0.5550\\
+&= 0.55505\\
 \end{align}
-Hence, the probability of hitting the target atleast twice is 0.5550
+Hence, the probability of hitting the target atleast twice is 0.55505
 \end{document}
