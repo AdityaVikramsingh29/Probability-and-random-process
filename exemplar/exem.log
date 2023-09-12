@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  11 SEP 2023 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  12 SEP 2023 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,9 +1212,9 @@ Package rerunfilecheck Info: File `exem.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29165 strings out of 478287
- 575080 string characters out of 5849290
- 849550 words of memory out of 5000000
+ 29159 strings out of 478287
+ 575003 string characters out of 5849290
+ 838550 words of memory out of 5000000
  46737 multiletter control sequences out of 15000+600000
  546114 words of font info for 198 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1227,10 +1227,10 @@ fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on exem.pdf (1 page, 51356 bytes).
+Output written on exem.pdf (1 page, 50558 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
