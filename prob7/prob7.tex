@@ -100,7 +100,7 @@
 
 \title{
 %  \logo{
-Solution 12.13.3.81
+Solution Gate EC 29.2022
 %  }
 }
 \author{ Aditya Vikram Singh$^{*}$% <-this % stops a space
@@ -211,46 +211,111 @@ Solution 12.13.3.81
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-\textbf{Question 22}
-Eight coins are tossed together. The probability of getting exactly 3 heads is\\
-\begin{enumerate}
+\textbf{Question 29}
+Let H(X) denote the entropy of a discrete
+random variable X taking K possible distinct
+real values. Which of the following statements
+is/are necessarily true?
+\begin{enumerate}[label=(\Alph*)]
 \item 
-$\frac{1}{256}$\\
+$H(X)\leq \log _{2} K$ bits\\
 \item 
-$\frac{7}{32}$\\
-\item 
-$\frac{5}{32}$\\
-\item 
-$\frac{3}{32}$\\
+$H(X) \leq H(2X)$\\
+\item
+$H(X)\leq H(X^2)$\\
+\item
+$H(X) \leq H(2^X)$\\
 \end{enumerate}
 \solution
-\begin{table}[htpb]-
+\begin{table}[htpb]
 \centering 
-\caption{Random Variable and probability Table}
-
 \begin{tabular}{|c|c|c|}
 \hline
 Random independent variable	&	value	of R.V		   &Description\\
 \hline
-$n$                         & 8                                & Total no. of coin toss\\
+$X$                         & $X$ $\in(x_1,x_2 ... ,x_K)$                                & Value of the discrete variable X\\
 \hline
-$X$	        	&0 $\leq$ X $\leq$ 8		     & no. of heads\\
+$K$	        	& $K \in N$		     & Total no. of distinct values\\
 \hline
 \end{tabular}
 \end{table}
-The probability or getting a head is 
+If all the $K$ distinct values of the variable have the same probability,\\
+ then Entropy will be maximum 
+ \begin{align}
+ H(X)max = \log _{2}K 
+ \end{align}
+ but, we know that every value will have a different value so,
+ \begin{align}
+ H(X)max \leq \log _{2}K 
+ \end{align}
+ Hence, Option(A) is correct
+ \begin{align}
+ H(X) = \sum_{i=0}^{k}P_X{x_i} \log _{2} \frac{1}{P_X{x_i}}\\
+ \end{align}
+ Let's consider the discrete variable as follows
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$X \in x_i$	&	$P_X{x_i}$\\
+\hline
+$-1$                         & $\frac{1}{4} $ \\
+\hline
+$0$                         & $\frac{1}{2}$  \\
+\hline
+$1$                         & $\frac{1}{4} $ \\
+\hline
+\end{tabular}
+\end{table}
 \begin{align}
-p &= \frac{1}{2}
-\end{align}
-The pmf for the binomial distribution is 
+H(X) = \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
+H(X) =  1.5 units
+ \end{align}
+Now $ Y = 2X$
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&          $P_Y{y_i}$\\
+\hline
+$-2$                         & $\frac{1}{4} $       \\
+\hline
+$0$                         & $\frac{1}{2} $ \\
+\hline
+$2$                         & $\frac{1}{4}$ \\
+\hline
+\end{tabular}
+\end{table}
 \begin{align}
-p_{X}(k) &= \myvec{n\\k}p^k\brak{1-p}^{n-k}  &\text{k} = 0,1, 2,.. 8\\ 
-\end{align}
-For exactly 3 heads
-\begin{align}
-p_{X}(3) &= \myvec{8\\3}p^3\brak{1-p}^{5}\\
-&= 56\brak{\frac{1}{2}}^3\brak{\frac{1}{2}}^{5}\\
-&= \frac{7}{32}
-\end{align}
-Hence, the probability of getting 3 heads is 0.21875
+H(Y) = \sum_{i=0}^{2}P_Y{y_i} \log _{2} \frac{1}{P_Y{y_i}}\\
+H(Y) =  1.5 units\\
+  H(Y) = H(2X) =H(X)
+ \end{align}
+ Hence, Option(B) is correct\\
+ Similarly on substituting $Y = X^2$\\
+  \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&	$P_Y{y_i}$\\
+\hline
+$0$                         & $\frac{1}{2} $       \\
+\hline
+$1$                         & $\frac{1}{2} $ \\
+\hline
+\end{tabular}
+\end{table}
+ \begin{align}
+H(Y) = \sum_{i=0}^{1}P_Y{y_i} \log _{2} \frac{1}{P_Y{y_i}}\\
+H(Y) =  1units\\
+  H(Y) = H(X^2) \leq H(X)
+ \end{align}
+ Hence, Option(C) is incorrect\\
+ Now for $Y = 2^X$\\
+ As the function Y is monotonically increasing, so for every distinct $X$, we get a distinct $Y$ 
+ \begin{align}
+  H(Y) = H(2^X) =  H(X) 
+ \end{align}
+ Hence, Option(D) is correct\\
+ The ans is (A), (B), (D)
 \end{document}
