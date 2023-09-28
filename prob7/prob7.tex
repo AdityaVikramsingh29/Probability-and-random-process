@@ -235,12 +235,28 @@ Random independent variable	&	value	of R.V		   &Description\\
 \hline
 $X$                         & $X$ $\in(x_1,x_2 ... ,x_K)$                                & Value of the discrete variable X\\
 \hline
-$K$	        	& $K \in N$		     & Total no. of distinct values\\
-\hline
 \end{tabular}
 \end{table}
-If all the $K$ distinct values of the variable have the same probability,\\
- then Entropy will be maximum 
+For Option(A) we will find the $H(X)max$ \\
+We know that :
+\begin{align}
+\sum_{i=0}^{k}P_X{x_i} &= 1\\
+ H(X) &= \sum_{i=0}^{k}P_X{x_i} \log _{2} \frac{1}{P_X{x_i}}
+ \end{align}
+ Now,we use lagranges multiplier to find the maximum entropy subject to the lagranges multiplier constant 
+$\lambda$ and $P_X{x_i}$
+\begin{align}
+L\brak{P_X{x_i},\lambda} &= -\sum_{0}^{k}P_X{x_i} \log _{2}P_X{x_i} + \lambda\brak{\sum_{0}^{k}P_X{x_i} - 1}\\
+\frac{\partial L}{\partial P_X{x_i}} &= -\log _{2}P_X{x_i} -1 + \lambda
+\end{align}
+Now, we take the derivative of L with respect to each $P_X{x_i}$ equal to zero for $H(X)max$
+\begin{align}
+\lambda = \log _{2}\frac{2}{k}\\
+P_X{x_i} = 1/K
+\end{align}
+If all the $K$ distinct values of the variable have the same probability,
+then Entropy will be maximum \\
+ On solving, we get the value of 
  \begin{align}
  H(X)max = \log _{2}K 
  \end{align}
@@ -249,9 +265,6 @@ If all the $K$ distinct values of the variable have the same probability,\\
  H(X) \leq \log _{2}K 
  \end{align}
  Hence, Option(A) is correct
- \begin{align}
- H(X) = \sum_{i=0}^{k}P_X{x_i} \log _{2} \frac{1}{P_X{x_i}}\\
- \end{align}
  Let's consider the discrete variable as follows
  \begin{table}[htpb]
 \centering 
