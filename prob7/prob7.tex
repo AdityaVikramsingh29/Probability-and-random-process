@@ -237,40 +237,41 @@ $X$                         & $X$ $\in(x_1,x_2 ... ,x_K)$                       
 \hline
 \end{tabular}
 \end{table}
-For Option(A) we will find the $H(X)max$ \\
+\begin{enumerate}
+\item For Option(A) we will find the $H(X)max$ \\
 We know that :
 \begin{align}
-\sum_{i=0}^{k}P_X{x_i} &= 1\\
- H(X) &= \sum_{i=0}^{k}P_X{x_i} \log _{2} \frac{1}{P_X{x_i}}
+\sum_{i=0}^{k}p_X(x_i) &= 1\\
+ H(X) &= \sum_{i=0}^{k}p_X(x_i) \log _{2} \frac{1}{p_X(x_i)}
  \end{align}
  Now,we use lagranges multiplier to find the maximum entropy subject to the lagranges multiplier constant 
-$\lambda$ and $P_X{x_i}$
+$\lambda$ and $p_X(x_i)$
 \begin{align}
-L\brak{P_X{x_i},\lambda} &= -\sum_{0}^{k}P_X{x_i} \log _{2}P_X{x_i} + \lambda\brak{\sum_{0}^{k}P_X{x_i} - 1}\\
-\frac{\partial L}{\partial P_X{x_i}} &= -\log _{2}P_X{x_i} -1 + \lambda
+L\brak{p_X(x_i),\lambda} &= -\sum_{0}^{k}p_X(x_i) \log _{2}p_X(x_i) + \lambda\brak{\sum_{0}^{k}p_X(x_i) - 1}\\
+\frac{\partial L}{\partial p_X(x_i)} &= -\log _{2}p_X(x_i) -1 + \lambda
 \end{align}
-Now, we take the derivative of L with respect to each $P_X{x_i}$ equal to zero for $H(X)max$
+Now, we take the derivative of L with respect to each $p_X(x_i)$ equal to zero for $H(X)max$
 \begin{align}
 \lambda = \log _{2}\frac{2}{k}\\
-P_X{x_i} = 1/K
+p_X(x_i) = 1/K
 \end{align}
-If all the $K$ distinct values of the variable have the same probability,
-then Entropy will be maximum \\
+%If all the $K$ distinct values of the variable have the same probability,
+%then Entropy will be maximum \\
  On solving, we get the value of 
  \begin{align}
- H(X)max = \log _{2}K 
+ H(X)max &= \log _{2}K 
  \end{align}
- but, we know that every value will have a different value so,
+% but, we know that every $x_i$ will have a different value so,
  \begin{align}
  H(X) \leq \log _{2}K 
  \end{align}
- Hence, Option(A) is correct
- Let's consider the discrete variable as follows
+ Hence, Option(A) is correct\\
+Let's consider the discrete variable as follows
  \begin{table}[htpb]
 \centering 
 \begin{tabular}{|c|c|}
 \hline
-$X \in x_i$	&	$P_X{x_i}$\\
+$X \in x_i$	&	$p_X(x_i)$\\
 \hline
 $-1$                         & $\frac{1}{4} $ \\
 \hline
@@ -281,15 +282,15 @@ $1$                         & $\frac{1}{4} $ \\
 \end{tabular}
 \end{table}
 \begin{align}
-H(X) = \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
-H(X) =  1.5 units
+H(X) &= \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
+H(X) &=  1.5 units
  \end{align}
-Now $ Y = 2X$
+\item Now $ Y = 2X$
  \begin{table}[htpb]
 \centering 
 \begin{tabular}{|c|c|}
 \hline
-$Y \in y_i$	&          $P_Y{y_i}$\\
+$Y \in y_i$	&          $p_Y(y_i)$\\
 \hline
 $-2$                         & $\frac{1}{4} $       \\
 \hline
@@ -300,17 +301,17 @@ $2$                         & $\frac{1}{4}$ \\
 \end{tabular}
 \end{table}
 \begin{align}
-H(Y) = \sum_{i=0}^{2}P_Y{y_i} \log _{2} \frac{1}{P_Y{y_i}}\\
-H(Y) =  1.5 units\\
-  H(Y) = H(2X) =H(X)
+H(Y) &= \sum_{i=0}^{2}p_Y(y_i) \log _{2} \frac{1}{p_Y(y_i)}\\
+H(Y) &=  1.5 units\\
+  H(Y) &= H(2X) =H(X)
  \end{align}
  Hence, Option(B) is correct\\
- Similarly on substituting $Y = X^2$\\
+ \item Similarly on substituting $Y = X^2$\\
   \begin{table}[htpb]
 \centering 
 \begin{tabular}{|c|c|}
 \hline
-$Y \in y_i$	&	$P_Y{y_i}$\\
+$Y \in y_i$	&	$p_Y(y_i)$\\
 \hline
 $0$                         & $\frac{1}{2} $       \\
 \hline
@@ -319,16 +320,17 @@ $1$                         & $\frac{1}{2} $ \\
 \end{tabular}
 \end{table}
  \begin{align}
-H(Y) = \sum_{i=0}^{1}P_Y{y_i} \log _{2} \frac{1}{P_Y{y_i}}\\
-H(Y) =  1units\\
-  H(Y) = H(X^2) \leq H(X)
+H(Y) &= \sum_{i=0}^{1}p_Y(y_i) \log _{2} \frac{1}{p_Y(y_i)}\\
+H(Y) &=  1units\\
+  H(Y) &= H(X^2) \leq H(X)
  \end{align}
  Hence, Option(C) is incorrect\\
- Now for $Y = 2^X$\\
+ \item Now for $Y = 2^X$\\
  As the function Y is monotonically increasing, so for every distinct $X$, we get a distinct $Y$ 
  \begin{align}
   H(Y) = H(2^X) =  H(X) 
  \end{align}
  Hence, Option(D) is correct\\
  The ans is (A), (B), (D)
+ \end{enumerate}
 \end{document}
