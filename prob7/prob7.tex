@@ -16,6 +16,7 @@
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
 \usepackage{gvv}
+\usepackage{optidef}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -239,12 +240,24 @@ $X$                         & $X$ $\in(x_1,x_2 ... ,x_K)$                       
 \end{table}
 \begin{enumerate}
 \item For Option(A) we will find the $H(X)max$ \\
-We know that :
-\begin{align}
-\sum_{k=0}^{K}p_X(k) &= 1\\
- H(X) &= \sum_{k=0}^{K}p_X(k) \log _{2} \frac{1}{p_X(k)}
- \end{align}
- Now,we use lagranges multiplier to find the maximum entropy subject to the lagranges multiplier constant 
+%We know that :
+%\begin{align}
+%\sum_{k=0}^{K}p_X(k) &= 1\\
+ %H(X) &= \sum_{k=0}^{K}p_X(k) \log _{2} \frac{1}{p_X(k)}
+ %\end{align}
+\begin{maxi*}|s|
+{x}{H(x)}
+{}{}
+\addConstraint{\sum_{k=0}^{K}p_X(k) = 1}
+%\addConstraint{}{}
+\end{maxi*}
+\begin{maxi*}|s|
+{x}{\sum_{k=0}^{K}p_X(k) \log _{2} \frac{1}{p_X(k)}}
+{}{}
+\addConstraint{\sum_{k=0}^{K}p_X(k) = 1}
+%\addConstraint{}{}
+\end{maxi*}
+ Now, we use Lagrange multiplier to find the maximum entropy subject to the Lagrange's multiplier constant 
 $\lambda$ and $p_X(k)$
 \begin{align}
 L\brak{p_X(k),\lambda} &= -\sum_{k = 0}^{K}p_X(k) \log _{2}p_X(k) + \lambda\brak{\sum_{k = 0}^{k}p_X(k) - 1}\\
