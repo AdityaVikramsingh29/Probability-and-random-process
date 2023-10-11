@@ -1,47 +1,43 @@
 #include <stdio.h>
 #include <math.h>
 
-double entropy(int K, double *probabilities) {
-    double H = 0;
-    for (int i = 0; i < K; i++) {
-        if (probabilities[i] > 0) {
-            H -= probabilities[i] * log2(probabilities[i]);
+// Function to calculate the entropy of a random variable X
+double entropy(double x[], int n) {
+    double ent = 0.0;
+    for (int i = 0; i < n; i++) {
+        if (x[i] > 0) {
+            ent -= x[i] * log2(x[i]);
         }
     }
-    return H;
+    return ent;
 }
 
 int main() {
-    // Define the number of possible values K and their probabilities for variable X
-    int K = 4;
-    double probabilities_X[] = {0.2, 0.3, 0.2, 0.3};
+ 
+    double X[] = {1.0 / 4.0, 1.0 / 2.0, 1.0 / 4.0}; 
 
-    // Calculate H(X)
-    double H_X = entropy(K, probabilities_X);
+    int K = sizeof(X) / sizeof(X[0]); 
 
-    // Define probabilities for 2X, X^2, and 2^X
-    double probabilities_2X[] = {0.2, 0.3, 0.2, 0.3}; // Replace with the actual values
-    double probabilities_X2[] = {0.1, 0.2, 0.1, 0.6}; // Replace with the actual values
-    double probabilities_2X_X[] = {0.2, 0.3, 0.2, 0.3}; // Replace with the actual values
 
-    // Calculate the entropies for each option
-    double H_2X = entropy(K, probabilities_2X);
-    double H_X2 = entropy(K, probabilities_X2);
-    double H_2X_X = entropy(K, probabilities_2X_X);
+    double HX = entropy(X, K);
+
+   
+    double H2X = entropy(X, K); 
+    double HX2 = entropy(X, K); 
+    double H2PowX = entropy(X, K); 
+
+    // Update the distribution for X^2
+    double X2[K];
+    for (int i = 0; i < K; i++) {
+        X2[i] = X[i] * X[i];
+    }
+    double HX2_updated = entropy(X2, K);
 
     // Check the statements
-    if (H_X <= log2(K)) {
-        printf("A. H(X) <= log2(K) is true\n");
-    }
-    if (H_X <= H_2X) {
-        printf("B. H(X) <= H(2X) is true\n");
-    }
-    if (H_X <= H_X2) {
-        printf("C. H(X) <= H(X2) is true\n");
-    }
-    if (H_X <= H_2X_X) {
-        printf("D. H(X) <= H(2^X) is true\n");
-    }
+    printf("H(X) <= log2(K) bits: %s\n", HX <= log2(K) ? "True" : "False");
+    printf("H(X) <= H(2X): %s\n", HX <= H2X ? "True" : "False");
+    printf("H(X) <= H(X^2): %s\n", HX <= HX2_updated ? "True" : "False");
+    printf("H(X) <= H(2^X): %s\n", HX <= H2PowX ? "True" : "False");
 
     return 0;
 }
