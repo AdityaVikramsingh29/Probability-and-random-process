@@ -342,9 +342,24 @@ H(Y) &=  1units\\
  \end{align}
  Hence, Option(C) is incorrect\\
  \item Now for $Y = 2^X$\\
- As the function Y is monotonically increasing, so for every distinct $X$, we get a distinct $Y$ 
- \begin{align}
-  H(Y) = H(2^X) =  H(X) 
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&	$p_Y(k)$\\
+\hline
+$2^{-1} = \frac{1}{2}$                         & $\frac{1}{4} $ \\
+\hline
+$2^0 = 1$                          & $\frac{1}{2}$  \\
+\hline
+$2^1 = 2$                          & $\frac{1}{4} $ \\
+\hline
+\end{tabular}
+\end{table}
+\begin{align}
+H(Y) &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H(Y) &=  1.5 units\\
+  H(Y) &= H(2X) =H(X)
  \end{align}
  Hence, Option(D) is correct\\
  The ans is (A), (B), (D)\\
