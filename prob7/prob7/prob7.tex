@@ -282,26 +282,44 @@ p_X(k) = 1/K
  H(X) \leq \log _{2}K 
  \end{align}
  Hence, Option(A) is correct\\
-\item Consider
+\item Let's consider the discrete variable as follows
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$X \in x_i$	&	$p_X(k)$\\
+\hline
+$-1$                         & $\frac{1}{4} $ \\
+\hline
+$0$                         & $\frac{1}{2}$  \\
+\hline
+$1$                         & $\frac{1}{4} $ \\
+\hline
+\end{tabular}
+\end{table}
 \begin{align}
-Y = 2X
-\end{align}
-let $m$ denote the entries for Y 
+H(X) &= \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
+H(X) &=  1.5 units
+ \end{align}
+ Now $ Y = 2X$
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&          $p_Y(k)$\\
+\hline
+$-2$                         & $\frac{1}{4} $       \\
+\hline
+$0$                         & $\frac{1}{2} $ \\
+\hline
+$2$                         & $\frac{1}{4}$ \\
+\hline
+\end{tabular}
+\end{table}
 \begin{align}
-m = 2k
-\end{align}
-\begin{align}
-p_Y(m)  &= p_{2X}(2k)\\
- &= P(2X = 2k)\\
- &= P(X= k)\\
- p_Y(m)&= p_X(k)
-\end{align}
-Entropy for Y is
-\begin{align}
- H(Y) = H(2X)
- &= -\sum_{m = 0}^{M}p_Y(m)\log _{2}p_Y(m)\\
- &= -\sum_{k = 0}^{K}p_X(k) \log _{2}p_X(k)\\
-H(2X) &= H(X)
+H(Y) &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H(Y) &=  1.5 units\\
+  H(Y) &= H(2X) =H(X)
  \end{align}
  Hence, Option(B) is correct\\
  \item Similarly on substituting $Y = X^2$\\
@@ -323,30 +341,28 @@ H(Y) &=  1units\\
   H(Y) &= H(X^2) \leq H(X)
  \end{align}
  Hence, Option(C) is incorrect\\
- \item \begin{align}
-Y = 2^X
-\end{align}
-let $m$ denote the entries for Y 
+ \item Now for $Y = 2^X$\\
+ \begin{table}[htpb]
+\centering 
+\begin{tabular}{|c|c|}
+\hline
+$Y \in y_i$	&	$p_Y(k)$\\
+\hline
+$2^{-1} = \frac{1}{2}$                         & $\frac{1}{4} $ \\
+\hline
+$2^0 = 1$                          & $\frac{1}{2}$  \\
+\hline
+$2^1 = 2$                          & $\frac{1}{4} $ \\
+\hline
+\end{tabular}
+\end{table}
 \begin{align}
-m = 2^k
-\end{align}
-\begin{align}
-p_Y(m)  &= p_{2^X}(2^k)\\
- &= P(2^X = 2^k)\\
-\end{align}
-Taking $\log _{2}$ both sides
-\begin{align}
- &= P(X= k)\\
- p_Y(m)&= p_X(k)
-\end{align}
-Entropy for Y is
-\begin{align}
- H(Y) = H(2^X)
- &= -\sum_{m = 0}^{M}p_Y(m)\log _{2}p_Y(m)\\
- &= -\sum_{k = 0}^{K}p_X(k) \log _{2}p_X(k)\\
-H(2^X) &= H(X)
+H(Y) &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H(Y) &=  1.5 units\\
+  H(Y) &= H(2X) =H(X)
  \end{align}
  Hence, Option(D) is correct\\
- The ans is (A), (B), (D)
+ The ans is (A), (B), (D)\\
+ These options are correct for the particular example.
  \end{enumerate}
 \end{document}
