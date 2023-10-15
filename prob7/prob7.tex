@@ -213,19 +213,19 @@ Solution Gate EC 29.2022
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
 \textbf{Question 29}
-Let H(X) denote the entropy of a discrete
+Let H\brak{X} denote the entropy of a discrete
 random variable X taking K possible distinct
 real values. Which of the following statements
 is/are necessarily true?
 \begin{enumerate}[label=(\Alph*)]
 \item 
-$H(X)\leq \log _{2} K$ bits\\
+$H\brak{X}\leq \log _{2} K$ bits\\
 \item 
-$H(X) \leq H(2X)$\\
+$H\brak{X} \leq H\brak{2X}$\\
 \item
-$H(X)\leq H(X^2)$\\
+$H\brak{X}\leq H\brak{X^2}$\\
 \item
-$H(X) \leq H(2^X)$\\
+$H\brak{X} \leq H\brak{2^X}$\\
 \end{enumerate}
 \solution
 \begin{table}[htpb]
@@ -243,10 +243,10 @@ $X$                         & $X$ $\in(x_1,x_2 ... ,x_K)$                       
 We know that :
 %\begin{align}
 %\sum_{k=0}^{K}p_X(k) &= 1\\
-% H(X) &= \sum_{k=0}^{K}p_X(k) \log _{2} \frac{1}{p_X(k)}
+% H\brak{X} &= \sum_{k=0}^{K}p_X(k) \log _{2} \frac{1}{p_X(k)}
  %\end{align}
  \begin{maxi*}|s|
-{p_X(k)}{H(x)}
+{p_X(k)}{H\brak{X}}
 {}{}
 \addConstraint\sum_{k=0}^{K}p_X(k) &= 1
 %{y_{i}(w\phi(x_{i}+b))+\xi_{i}-1}
@@ -266,7 +266,7 @@ $\lambda$ and $p_X(k)$
 L\brak{p_X(k),\lambda} &= -\sum_{k = 0}^{K}p_X(k) \log _{2}p_X(k) + \lambda\brak{\sum_{k = 0}^{k}p_X(k) - 1}\\
 \frac{\partial L}{\partial p_X(k)} &= -\log _{2}p_X(k) -1 + \lambda
 \end{align}
-Now, we take the derivative of L with respect to each $p_X(k)$ equal to zero for $H(X)max$
+Now, we take the derivative of L with respect to each $p_X(k)$ equal to zero for $H\brak{X}max$
 \begin{align}
 \lambda = \log _{2}\frac{2}{k}\\
 p_X(k) = 1/K
@@ -275,11 +275,11 @@ p_X(k) = 1/K
 %then Entropy will be maximum \\
  On solving, we get the value of 
  \begin{align}
- H(X)_{max} &= \log _{2}K 
+ H\brak{X}_{max} &= \log _{2}K 
  \end{align}
 % but, we know that every $x_i$ will have a different value so,
  \begin{align}
- H(X) \leq \log _{2}K 
+ H\brak{X} \leq \log _{2}K 
  \end{align}
  Hence, Option(A) is correct\\
 \item Let's consider the discrete variable as follows
@@ -298,8 +298,8 @@ $1$                         & $\frac{1}{4} $ \\
 \end{tabular}
 \end{table}
 \begin{align}
-H(X) &= \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
-H(X) &=  1.5 units
+H\brak{X} &= \frac{1}{4}\log _{2}4 + \frac{1}{2}\log _{2}2 +\frac{1}{4}\log _{2}4\\
+H\brak{X} &=  1.5 units
  \end{align}
  Now $ Y = 2X$
  \begin{table}[htpb]
@@ -317,9 +317,9 @@ $2$                         & $\frac{1}{4}$ \\
 \end{tabular}
 \end{table}
 \begin{align}
-H(Y) &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
-H(Y) &=  1.5 units\\
-  H(Y) &= H(2X) =H(X)
+H\brak{Y} &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H\brak{Y} &=  1.5 units\\
+  H\brak{Y} &= H(2X) =H\brak{X}
  \end{align}
  Hence, Option(B) is correct\\
  \item Similarly on substituting $Y = X^2$\\
@@ -336,9 +336,9 @@ $1$                         & $\frac{1}{2} $ \\
 \end{tabular}
 \end{table}
  \begin{align}
-H(Y) &= \sum_{i=0}^{1}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
-H(Y) &=  1units\\
-  H(Y) &= H(X^2) \leq H(X)
+H\brak{Y} &= \sum_{i=0}^{1}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H\brak{Y} &=  1units\\
+  H\brak{Y} &= H\brak{X^2} \leq H\brak{X}
  \end{align}
  Hence, Option(C) is incorrect\\
  \item Now for $Y = 2^X$\\
@@ -357,9 +357,9 @@ $2^1 = 2$                          & $\frac{1}{4} $ \\
 \end{tabular}
 \end{table}
 \begin{align}
-H(Y) &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
-H(Y) &=  1.5 units\\
-  H(Y) &= H(2^X) =H(X)
+H\brak{Y} &= \sum_{i=0}^{2}p_Y(k) \log _{2} \frac{1}{p_Y(k)}\\
+H\brak{Y} &=  1.5 units\\
+  H\brak{Y} &= H\brak{2^X} =H\brak{X}
  \end{align}
  Hence, Option(D) is correct\\
  The ans is (A), (B), (D)\\
