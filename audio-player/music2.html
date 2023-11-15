@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Player</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        /* Reset some default browser styles */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main container */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e60b6;
+            text-align: center;
+            padding: 20px;
+     
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Header styles */
+        h1 {
+            color: #d78800;
+        }
+
+        /* Audio player styles */
+        #audioPlayer {
+            width: 100%;
+        }
+
+        /* Playlist styles */
+        #playlistContainer {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        #playlist h2 {
+            color: #d70054;
+            margin-bottom: 10px;
+        }
+
+        #playlist ul {
+            list-style-type: none;
+        }
+
+        #playlist li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+        }
+
+        #playlist li a:hover {
+            background-color: rgb(245, 245, 245);
+        }
+
+        /* Control buttons styles */
+        .control-button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #d70054;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+
+        .control-button:hover {
+            background-color: #ff3860;
+        }
+
+        /* Button group styles */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Raag</h1>
+
+    <audio id="audioPlayer" controls>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="button-group">
+        <button id="shuffleButton" class="control-button"><i class="fas fa-random"></i></button>
+        <button id="prevButton" class="control-button"><i class="fas fa-backward"></i></button>
+        <button id="togglePlayPause" class="control-button"><i class="fas fa-play"></i></button>
+        <button id="nextButton" class="control-button"><i class="fas fa-forward"></i></button>
+    </div>
+    
+    <button id="playlistButton" class="control-button"><i class="fas fa-list"></i></button>
+
+    <div id="playlistContainer">
+        <h2>Playlist</h2>
+        <ul id="playlist">
+            <li><a href="C:\Users\91873\Downloads\song1.mp3">Song 1</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song10.mp3">Song 2</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song13.mp3">Song 3</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song11.mp3">Song 4</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song12.mp3">Song 5</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song14.mp3">Song 6</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song15.mp3">Song 7</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song16.mp3">Song 8</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song17.mp3">Song 9</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song18.mp3">Song 10</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song19.mp3">Song 11</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song20.mp3">Song 12</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song21.mp3">Song 13</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song22.mp3">Song 14</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song23.mp3">Song 15</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song24.mp3">Song 16</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song25.mp3">Song 17</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song26.mp3">Song 18</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song27.mp3">Song 19</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song28.mp3">Song 20</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song29.mp3">Song 21</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song30.mp3">Song 22</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song31.mp3">Song 23</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song32.mp3">Song 24</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song33.mp3">Song 25</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song34.mp3">Song 26</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song35.mp3">Song 27</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song36.mp3">Song 28</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song37.mp3">Song 29</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song38.mp3">Song 30</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song39.mp3">Song 31</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song40.mp3">Song 32</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song41.mp3">Song 33</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song42.mp3">Song 34</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song43.mp3">Song 35</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song44.mp3">Song 36</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song45.mp3">Song 37</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song46.mp3">Song 38</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song47.mp3">Song 39</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song48.mp3">Song 40</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song49.mp3">Song 41</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song5.mp3">Song 42</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song6.mp3">Song 43</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song7.mp3">Song 44</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song8.mp3">Song 45</a></li>
+            <li><a href="C:\Users\91873\Downloads\Telegram Desktop\song9.mp3">Song 46</a></li>
+      
+        </ul>
+    </div>
+
+    <script>
+        var audio = document.getElementById("audioPlayer");
+        var playlistContainer = document.getElementById("playlistContainer");
+        var shuffleButton = document.getElementById("shuffleButton");
+        var togglePlayPause = document.getElementById("togglePlayPause");
+        var prevButton = document.getElementById("prevButton");
+        var nextButton = document.getElementById("nextButton");
+        var playlistButton = document.getElementById("playlistButton");
+
+        var currentSongIndex = 0;
+        var songs = document.querySelectorAll("#playlist a");
+
+        function playCurrentSong() {
+            audio.src = songs[currentSongIndex].href;
+            audio.play();
+        }
+
+        togglePlayPause.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                togglePlayPause.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                togglePlayPause.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+
+        prevButton.addEventListener("click", function() {
+            if (currentSongIndex > 0) {
+                currentSongIndex--;
+                playCurrentSong();
+            }
+        });
+
+        nextButton.addEventListener("click", function() {
+            if (currentSongIndex < songs.length - 1) {
+                currentSongIndex++;
+                playCurrentSong();
+            }
+        });
+
+        playlistButton.addEventListener("click", function() {
+            if (playlistContainer.style.display === "none") {
+                playlistContainer.style.display = "block";
+            } else {
+                playlistContainer.style.display = "none";
+            }
+        });
+
+        shuffleButton.addEventListener("click", function() {
+            shuffleAndPlay();
+        });
+
+        function shuffleAndPlay() {
+            var randomIndex = Math.floor(Math.random() * songs.length);
+            currentSongIndex = randomIndex;
+            playCurrentSong();
+        }
+
+        songs.forEach(function(song, index) {
+            song.addEventListener("click", function(event) {
+                event.preventDefault();
+                currentSongIndex = index;
+                playCurrentSong();
+            });
+        });
+    </script>
+</body>
+</html>
+
+   
